@@ -1,0 +1,271 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "mixins";
+@import "variables";
+@import "buttons";
+@import "ngSelect";
+@import "datepicker";
+@import "tabs";
+@import "alert";
+@import "input";
+@import "materialIcons";
+@import "checkbox";
+@import "modal";
+@import "popover";
+@import "table";
+@import "chart";
+@import "scroll";
+@import "dndList";
+
+@font-face {
+  font-family: SF-UI;
+  src: url(../../fonts//SF-Pro-Display-Regular.otf) format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: SF-UI;
+  src: url(../../fonts//SF-Pro-Display-Semibold.otf) format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: SF-UI;
+  src: url(../../fonts//SF-Pro-Display-Medium.otf) format("opentype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../../fonts//Montserrat-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.c-no-drop {
+  cursor: no-drop;
+}
+
+.с-pointer {
+  cursor: pointer;
+}
+
+.chart-container {
+  position: relative;
+  flex-grow: 1;
+  min-height: 0;
+}
+
+.fullScreen {
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+}
+
+body {
+  background-color: $background-color;
+  color: #000033;
+  font-family: SF-UI;
+  font-weight: 400;
+}
+body.modal-open {
+  overflow-y: scroll !important;
+}
+.sub-header {
+  font-size: 0.9rem;
+  line-height: 1rem;
+  opacity: 0.7;
+}
+
+.logo {
+  width: auto;
+  height: 60px;
+}
+
+.form-label {
+  font-size: 0.8rem;
+  line-height: 0.5rem;
+}
+
+.card {
+  border: none;
+}
+
+.card-body {
+  padding: 1rem 1.25rem;
+}
+
+.c-title {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.c-small-title {
+  font-size: 0.8rem;
+}
+
+.icon-btn.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.icon-btn.btn:hover {
+  color: $primary-color;
+}
+
+.no-result-title {
+  background-color: $primary-color;
+  padding: 10px;
+  color: white;
+}
+
+#chartjs-tooltip .key-investment-table.table tbody {
+  th,
+  td {
+    padding: 0.5rem !important;
+  }
+}
+
+.form-control {
+  font-size: 1rem;
+  height: calc(1.5em + 1rem);
+}
+
+.alert,
+.alert-dismissible .close {
+  padding: 0.5rem 0.8rem;
+}
+
+.stripped-background {
+  background: -webkit-repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 0.1rem,
+    #0f72b6 0,
+    #0f72b6 0.5rem
+  );
+  background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 0.1rem,
+    #0f72b6 0,
+    #0f72b6 0.5rem
+  );
+}
+
+.app-container {
+  margin-top: 0.5rem;
+  margin-right: $main-margin-lg;
+  margin-left: $main-margin-lg;
+}
+
+.invalid-feedback {
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: #dc3545;
+}
+
+.statement-status-title {
+  font-size: 11px;
+}
+.status-circle {
+  line-height: 2.1;
+  font-size: 11px;
+
+  &:before {
+    vertical-align: middle;
+    content: "\25CF";
+  }
+}
+.status-circle-lg {
+  // line-height: 2.5;
+  font-size: 16px;
+}
+.success {
+  color: $success-color;
+}
+.waiting {
+  color: $warning-color;
+}
+.pending {
+  color: $disable-color;
+}
+.in-progress {
+  color: $warning-color;
+}
+.completed {
+  color: $success-color;
+}
+.rejected {
+  color: $dark-red;
+}
+
+.table-card {
+  &__header {
+    padding: 0.25rem 0.5rem;
+
+    .table-title {
+      color: $font-color;
+      font-family: SF-UI;
+      font-size: 1.5rem;
+      font-weight: 500;
+      font-style: normal;
+      letter-spacing: -0.13px;
+      line-height: normal;
+      text-align: left;
+      margin: 0;
+      margin-bottom: 3px;
+    }
+
+    .table-title-sm {
+      color: $font-color;
+      font-family: SF-UI;
+      font-size: 1;
+      font-weight: 500;
+      font-style: normal;
+      letter-spacing: -0.13px;
+      line-height: normal;
+      text-align: left;
+      margin: 0;
+      margin-bottom: 3px;
+      padding: 0.25rem;
+    }
+  }
+  &__body {
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* You can add global styles to this file, and also import other style files */
+.game {
+  .container {
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -50px;
+      margin-left: -50px;
+      width: 100px;
+      height: 100px;
+
+      button {
+        width: 200px;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+
+
+<div class="card" 
+[ngClass]="{ gameOver: player?.status == '2' }"
+style="width: 18rem;">
+    <div class="card-body">
+      <div class="card-title " style="text-align: center">   
+      <h1 style="text-align: center">{{player?.username}} 
+      
+      </h1>
+      <button *ngIf="player?.status==2&&isOwner" class="btn btn-success btx-xs" (click)="restart()"> restart</button>
+      <button *ngIf="player?.canDrinkElixir&&isOwner&&!!timerSub" class="btn btn-success btx-xs" (click)="drinkElixir()"> drink elixir 
+        {{ countDown | timeRemaining }}
+      </button>
+      </div>
+     
+      <a href="#" class="card-link">
+        <span class="input-icon material-icons"> attach_money </span>   
+        {{player?.point}}
+      </a>
+      <a href="#" class="card-link">
+        <span class="input-icon material-icons"> favorite </span>
+        {{player?.life}}</a>
+    </div>
+  </div>
+

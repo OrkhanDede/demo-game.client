@@ -1,0 +1,124 @@
+@import "src/assets/css/sass/variables";
+.input-group .input-icon {
+  user-select: none;
+  /* supported by Chrome and Opera */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  position: absolute;
+  top: 7%;
+  right: 4%;
+  padding: 4px;
+  cursor: pointer;
+  color: rgba(75, 87, 123, 0.4);
+  z-index: 999;
+  font-size: 1.5rem;
+  &:hover {
+    color: rgba(75, 87, 123, 0.8);
+  }
+}
+
+input.form-control {
+  background-color: #fff !important;
+  padding: 0 1rem;
+  font-family: SF-UI;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 24px;
+  text-align: left;
+  outline: none;
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    transition: background-color 5000s ease-in-out 0s;
+    filter: none;
+  }
+  &::placeholder {
+    color: $color-light-blue;
+  }
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+.form-control-no-borders {
+  border: none;
+  &:focus,
+  &:active {
+    outline: none;
+    border: none;
+  }
+}
+.form-control-lg {
+  height: 45px;
+}
+.form-control-hsm {
+  height: calc(1.5em + 0.5rem) !important;
+}
+.form-group-lg {
+  margin-bottom: 1.75rem;
+}
+
+div.gray-bordered {
+  border: 2px solid #d9e0ec;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  input {
+    font-family: SF-UI;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    text-align: left;
+  }
+  span {
+    color: $font-color;
+    margin: 0 0.5rem;
+  }
+  &::placeholder {
+    color: $font-color !important;
+  }
+}
+label.form-label {
+  font-family: SF-UI;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: left;
+  color: $font-color;
+}
+
+label.form-label-sm {
+  font-family: SF-UI;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: left;
+  color: $font-color;
+}
+
+.gray-border {
+  border: 2px solid $border-gray !important;
+  height: calc(1.5em + 1.25rem) !important;
+}

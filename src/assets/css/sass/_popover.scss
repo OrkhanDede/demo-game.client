@@ -1,0 +1,11 @@
+.company-list-popover {
+    border: none;
+    box-shadow: 0 2px 10px 1px rgba(136, 148, 171, 0.25);
+    border-radius: 4px;
+    padding: 11px;
+    left: -32px !important;
+
+    .popover-arrow {
+        display: none;
+    }
+  }

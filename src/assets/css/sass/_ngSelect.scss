@@ -1,0 +1,111 @@
+.ng-select.ng-select-focused .ng-select-container,
+.ng-select.ng-select-opened .ng-select-container {
+  border-color: $primary-color-opacity-50 !important;
+  border-width: 2px;
+}
+
+.ng-select.ng-select-sm .ng-select-container {
+  height: calc(1.5em + 1rem);
+  min-height: unset;
+}
+.ng-select.ng-select-hsm .ng-select-container {
+  height: calc(1.5em + 0.5rem);
+  min-height: unset;
+}
+.ng-select.ng-select-lg .ng-select-container {
+  height: calc(1.5em + 2.5rem);
+  min-height: unset;
+  padding: 0 1rem;
+}
+.ng-select.ng-select-lg .ng-select-container,
+.ng-select.ng-select-lg input,
+.ng-select.ng-select-lg .ng-value-label {
+  font-size: 1.25rem;
+}
+.form-control:focus {
+  border-color: $primary-color-opacity-50 !important;
+  border-width: 2px;
+  box-shadow: none;
+}
+
+.ng-dropdown-panel {
+  border-right-color: $primary-color-opacity-50;
+  border-bottom-color: $primary-color-opacity-50;
+  border-left-color: $primary-color-opacity-50;
+  border-width: 2px;
+}
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected,
+.ng-dropdown-panel
+  .ng-dropdown-panel-items
+  .ng-option.ng-option-selected.ng-option-marked,
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+  color: #fff;
+  background-color: $primary-color;
+}
+
+.ng-select.ng-select-no-borders .ng-select-container,
+.ng-select.ng-select-no-borders .ng-select-container input {
+  border: none !important;
+  color: $font-color;
+  font-family: SF-UI;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 1.5rem;
+  text-align: left;
+}
+.ng-select.ng-select-no-borders .ng-arrow-wrapper .ng-arrow {
+  display: none;
+}
+
+.ng-select.ng-select-no-borders .ng-select-container .ng-value-container {
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.ng-select.ng-select-no-borders.ng-select-opened span.ng-arrow-wrapper:before {
+  transform: rotate(0);
+  margin-top: 0;
+}
+.ng-select.ng-select-no-borders span.ng-arrow-wrapper:before {
+  content: url("/assets/icons/chevron-down.svg");
+  transform: rotate(180deg);
+  margin-top: 8px;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: normal;
+  font-size: inherit;
+  text-rendering: auto;
+}
+.ng-select.ng-select-no-borders.active-selected {
+  border: 2px solid $primary-color;
+  .ng-value-label {
+    color: $primary-color !important;
+  }
+}
+.ng-select.ng-select-no-borders.gray-border {
+  border: 2px solid $border-gray !important;
+}
+.ng-select.ng-select-no-borders {
+  border-radius: 4px;
+}
+
+.ng-select.ng-select-simple {
+  outline: none;
+  box-shadow: none;
+}
+
+.ng-select.ng-select-simple .ng-select-container {
+  height: calc(1.5em + 0.5rem);
+  min-height: unset;
+
+  .ng-input {
+    top: 2px !important;
+  }
+}
+
+.ng-select.ng-select-simple .ng-option {
+  padding: 0.25rem 0.5rem !important;
+}

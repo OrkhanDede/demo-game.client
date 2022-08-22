@@ -1,0 +1,109 @@
+<div class="container-fluid">
+  <div class="login-page">
+    <div class="row">
+      <div class="col-lg-5 col-md-5 col-sm-12 col-12">
+        <div class="d-flex align-items-center auth">
+          <div class="col-lg-8 col-md-8 col-sm-12 m-auto login-form">
+            <div>
+              <div class="brand-logo"></div>
+              <div id="login-screen">
+                <div *ngIf="activeScreen == 'login'">
+                  <h1 style="text-align: center">Demo game</h1>
+                  <button class="btn btn-success" (click)="GetDemoGame()">Get demo game</button>
+                  <form
+                    [formGroup]="myForm"
+                    #form="ngForm"
+                    (ngSubmit)="onSubmit()"
+                  >
+                    <div *ngIf="!isRequiredSmsConfirmation">
+                      <div
+                        *ngIf="isLoginError"
+                        class="alert alert-danger"
+                        role="alert"
+                      >
+                        {{ message }}
+                      </div>
+                      <div class="form-group form-group-lg">
+                        <input
+                          placeholder="username"
+                          type="email"
+                          class="
+                            form-control
+                            form-control-lg
+                            form-control-input
+                            form-control-no-borders
+                          "
+                          name="emailOrUsername"
+                          formControlName="emailOrUsername"
+                        />
+                      </div>
+                      <div class="form-group form-group-lg mb-0">
+                        <div class="d-flex justify-content-between">
+                          <button
+                            type="button"
+                            tabindex="-1"
+                            (click)="activeScreen = 'resetPassword'"
+                            class="btn btn-link p-0 mb-2 restore-password"
+                          >
+                            reset password
+                          </button>
+                        </div>
+                        <div class="input-with-icon input-group">
+                          <input
+                            placeholder="password"
+                            type="{{ showPassword ? 'text' : 'password' }}"
+                            class="
+                              form-control
+                              form-control-lg
+                              form-control-no-borders
+                            "
+                            formControlName="password"
+                          />
+                          <span
+                            *ngIf="showPassword"
+                            class="input-icon material-icons"
+                            (click)="showPassword = !showPassword"
+                          >
+                            visibility_off
+                          </span>
+                          <span
+                            *ngIf="!showPassword"
+                            class="input-icon material-icons"
+                            (click)="showPassword = !showPassword"
+                          >
+                            visibility
+                          </span>
+                        </div>
+                      </div>
+
+                      <button
+                        style="margin-top: 30px"
+                        type="submit"
+                        [disabled]="loading"
+                        class="btn btn-primary btn-block btn-lg"
+                      >
+                        login
+                      </button>
+                    </div>
+                  </form>
+                </div>
+
+                <div *ngIf="activeScreen == 'resetPassword'">
+                  <reset-password
+                    (onPasswordChanged)="activeScreen = 'login'"
+                  ></reset-password>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7 col-md-7 col-15 p-0">
+        <div class="left-side">
+          <!-- <img src="assets/img/login-bg.png" alt="" /> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

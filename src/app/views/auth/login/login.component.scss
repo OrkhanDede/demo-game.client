@@ -1,0 +1,90 @@
+@import "src/assets/css/sass/variables";
+
+.login-page {
+  .login-form {
+    max-width: 330px;
+  }
+  .form-control-input {
+    padding: 0 20px;
+  }
+  .left-side {
+    height: 100%;
+    background-image: url("/assets/img/login-bg.png");
+    background-size: cover;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .brand-logo {
+    display: grid;
+    margin-bottom: 3rem;
+    padding: 0 0.5rem;
+    img {
+      margin: auto;
+      width: 100%;
+    }
+  }
+  .restore-password {
+    color: $font-color;
+    font-family: SF-UI;
+    font-size: 14px;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: right;
+  }
+
+  .input-with-icon {
+    background-color: #fff;
+    display: flex;
+    padding: 0 20px;
+    border-radius: 0.25rem;
+    input {
+      padding: 0;
+    }
+    img {
+      cursor: pointer;
+    }
+  }
+  .activate-code {
+    margin-top: 20px;
+    text-align: center;
+    display: grid;
+    button {
+      width: 140px;
+      height: 40px;
+    }
+    .btn-link {
+      text-decoration: unset;
+    }
+  }
+}
+
+.auth {
+  height: 100%;
+  min-height: 100vh;
+}
+
+@media (max-width: 850px) and (min-width: 767px) {
+  .brand-logo {
+    img {
+      width: 180px !important;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .left-side {
+    display: none;
+  }
+}
+
+:root {
+  touch-action: pan-x pan-y;
+  height: 100%;
+}
+
+body {
+  touch-action: manipulation;
+}

@@ -1,0 +1,183 @@
+.table-placeholder {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  span {
+    font-family: SF-UI;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+    color: #8e92a4;
+  }
+}
+
+.ngx-datatable.material:not(.cell-selection)
+  .datatable-body-row:hover
+  .datatable-row-group {
+  background-color: #bbc9f0 !important;
+}
+.ngx-datatable.material.striped .datatable-row-odd .datatable-row-left,
+.ngx-datatable.material.striped .datatable-row-odd .datatable-row-right,
+.ngx-datatable.material.striped .datatable-row-odd .datatable-row-center {
+  background: #dce3f9 !important;
+}
+
+.ngx-datatable.material.striped .datatable-row-left,
+.ngx-datatable.material.striped .datatable-row-center,
+.ngx-datatable.material.striped .datatable-row-right {
+  width: auto !important;
+}
+
+// .ngx-datatable.material:not(.cell-selection).striped .datatable-row-left,
+// .ngx-datatable.material:not(.cell-selection).striped .datatable-row-left:hover {
+//   cursor: pointer;
+// }
+
+.ngx-datatable.custom-table.fixed-row
+  .datatable-scroll
+  .datatable-body-row
+  .datatable-body-cell {
+  white-space: break-spaces;
+}
+
+.ngx-datatable.ngx-document-table {
+  &.document-list-datatable {
+  }
+  &.audit-reports-datatable {
+    border-radius: 5px;
+  }
+  .datatable-header .datatable-header-cell {
+    padding-left: 1.5rem !important;
+    font-size: 1rem !important;
+    strong,
+    span {
+      line-height: 32px;
+    }
+  }
+  .datatable-body {
+    overflow: hidden auto !important;
+
+    .datatable-body-row {
+      .datatable-body-cell {
+        padding-left: 1.5rem !important;
+      }
+    }
+  }
+}
+
+.ngx-datatable.custom-table {
+  box-shadow: unset !important;
+
+  .datatable-header .datatable-header-inner {
+    min-height: 40px;
+  }
+
+  .datatable-header .datatable-header-cell {
+    background-color: $primary-blue-two;
+    color: #fff;
+    padding: 0.4rem;
+    border: none;
+    height: 100%;
+    font-family: SF-UI;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    strong,
+    span {
+      vertical-align: middle;
+    }
+    &:hover {
+      border: none;
+    }
+  }
+  .datatable-header-cell-template-wrap {
+    vertical-align: middle;
+  }
+  .datatable-header .datatable-row-left .datatable-header-cell {
+    padding-left: 1.5rem;
+  }
+
+  .datatable-body {
+    .datatable-body-row {
+      .datatable-body-cell {
+        white-space: unset;
+        padding: 0.5rem 0.8rem;
+        color: $font-color;
+        font-family: SF-UI;
+        font-size: 14px;
+        font-style: normal;
+        letter-spacing: 1px;
+        height: 100%;
+      }
+    }
+  }
+  .datatable-footer {
+    display: none;
+  }
+
+  .viewers-link {
+    color: $font-color;
+  }
+
+  .file-link {
+    font-family: SF-UI;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 1px;
+    line-height: normal;
+    text-align: left;
+    color: $font-color;
+    margin: 0 0.5rem;
+  }
+  .file-extension {
+    width: 16px;
+    height: 19px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1rem;
+    &.pdf {
+      background: center / contain no-repeat url("/assets/icons/pdf.svg");
+    }
+    &.doc {
+      background: center / contain no-repeat url("/assets/icons/doc.svg");
+    }
+    &.xls {
+      background: center / contain no-repeat url("/assets/icons/xls.svg");
+    }
+    &.ppt {
+      background: center / contain no-repeat url("/assets/icons/ppt.svg");
+    }
+    &.folder {
+      background: center / contain no-repeat url("/assets/icons/folder.svg");
+    }
+    &.mp4 {
+      background: center / contain no-repeat url("/assets/icons/mp4.svg");
+    }
+    &.mp3 {
+      background: center / contain no-repeat url("/assets/icons/mp3.svg");
+    }
+  }
+}
+
+.ngx-datatable.document-manager-table {
+  .datatable-body-cell {
+    padding-left: 0.5rem !important;
+    padding-right: 0 !important;
+  }
+  .datatable-header-cell {
+    padding-left: 0.5rem !important;
+    font-size: 1rem !important;
+    white-space: nowrap;
+    span {
+      line-height: normal;
+    }
+  }
+}

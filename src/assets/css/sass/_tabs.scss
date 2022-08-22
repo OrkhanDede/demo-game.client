@@ -1,0 +1,36 @@
+.nav-tabs {
+  border-bottom: unset;
+  .nav-item {
+    .nav-link {
+      background-color: unset;
+      border-radius: 5px;
+      background-color: #f8f8f8;
+      color: $primary-color;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      text-underline-offset: 3px;
+      outline: none;
+      box-shadow: none;
+      padding: 0.25rem 0.5rem;
+      font-size: 1rem;
+      &.active {
+        background-color: $primary-color;
+        color: white;
+        text-decoration: none;
+        background-color: $primary-color;
+      }
+    }
+  }
+  :first-child {
+    .nav-link {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+  }
+  :last-child {
+    .nav-link {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+}

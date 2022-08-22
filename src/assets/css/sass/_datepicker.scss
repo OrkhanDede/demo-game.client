@@ -1,0 +1,23 @@
+.theme-default .bs-datepicker-head {
+  background-color: $primary-color;
+}
+
+.theme-default .bs-datepicker-body table td span.selected,
+.theme-default .bs-datepicker-body table td.selected span,
+.theme-default .bs-datepicker-body table td span[class*="select-"]:after,
+.theme-default .bs-datepicker-body table td[class*="select-"] span:after {
+  background-color: $primary-color;
+}
+
+.theme-default.theme-quarterly .bs-datepicker-body table tr:hover {
+  span {
+      background-color: #e9edf0;
+      color: white;
+  }
+}
+.theme-default.theme-quarterly .bs-datepicker-body table tr.quat-selected {
+  span {
+      background-color: $primary-color;
+      color: white;
+  }
+}

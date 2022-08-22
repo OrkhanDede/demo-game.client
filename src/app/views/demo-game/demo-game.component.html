@@ -1,0 +1,36 @@
+<div class="game">
+  <div *ngIf="!joinedGame;else  playGround">
+    <div class="container">
+      <div class="h-100 d-flex justify-content-center align-items-center">
+        <form
+                    [formGroup]="myForm"
+                    #form="ngForm"
+                    (ngSubmit)="joinGame()"
+                  >
+                  <div class="form-row">
+                    <div class="col">
+                      <input type="text" name="username" formControlName="username" class="form-control"  placeholder="Username">
+                      <div
+                      *ngIf="
+                      myForm.get('username')?.errors?.required &&
+                        form.submitted
+                      "
+                    >
+                      <small class="text-danger"> This field is required.</small>
+                    </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn btn-success" type="submit">Join game</button>
+                    </div>
+                  </div>
+                </form>
+       
+      </div>
+      
+    </div>
+  </div>
+    <ng-template #playGround>
+      <app-play-ground [player]="player" [players]="players" (onClickPlayerDrinkElixir)="drinkElixir()" (onClickPlayerRestart)="restart($event)" (onLeftClick)="leftClick()" (onShutClick)="shut($event)"></app-play-ground>
+    </ng-template>
+  </div>
+  
